@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>小</string>
+		<key>value</key>
+		<integer>13</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>中</string>
+		<key>value</key>
+		<integer>15</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>大</string>
+		<key>value</key>
+		<integer>17</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>特大</string>
+		<key>value</key>
+		<integer>19</integer>
+	</dict>
+</array>
+</plist>

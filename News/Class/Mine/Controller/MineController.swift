@@ -26,6 +26,7 @@ class MineController: BaseTableViewController {
         super.viewDidLoad()
 
         self.tableView.rowHeight = 44
+        self.tableView.separatorStyle = .none
         self.tableView.tableHeaderView = headerView
         self.tableView.xRegisterCell(cell: ConcernCell.self)
         self.tableView.xRegisterCell(cell: MineItemCell.self)

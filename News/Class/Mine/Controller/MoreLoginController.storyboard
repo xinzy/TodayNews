@@ -218,11 +218,13 @@
                     </view>
                     <connections>
                         <outlet property="closeBtn" destination="img-3K-oXk" id="E8b-Kl-o5R"/>
+                        <outlet property="codeTextField" destination="e3r-MJ-eZQ" id="wTh-HI-ckQ"/>
                         <outlet property="divideView" destination="yxT-ap-hfM" id="1Sy-Tc-nX3"/>
                         <outlet property="emailLoginBtn" destination="lxY-mO-r1I" id="D2i-Iy-V6X"/>
                         <outlet property="loginBtn" destination="0tP-ND-xcn" id="Lhs-cL-oNb"/>
                         <outlet property="loginReadBtn" destination="08m-fL-MzR" id="a4g-CV-hbS"/>
                         <outlet property="phoneContainer" destination="XQQ-0p-eEX" id="Vbx-HZ-KbA"/>
+                        <outlet property="phoneTextField" destination="6Ib-4c-LB0" id="hrq-Lz-62S"/>
                         <outlet property="qqLoginBtn" destination="xA5-4o-b8G" id="v9c-Ye-iYl"/>
                         <outlet property="tianyiLoginBtn" destination="jHs-Oz-lWi" id="dTS-bc-1St"/>
                         <outlet property="topTipsLabel" destination="wbz-ua-qEQ" id="0A3-1g-lHC"/>

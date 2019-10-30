@@ -15,3 +15,12 @@ struct ApiResultList<T>: HandyJSON {
     var data: [T]? = nil
 }
 
+struct ApiResult<T>: HandyJSON {
+    var data: T? = nil
+    var message: String = ""
+}
+
+struct Content<R>: HandyJSON {
+    var data: R? = nil
+    var version: String = ""
+}

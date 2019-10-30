@@ -15,6 +15,9 @@ class MoreLoginController: BaseAnimatableViewController {
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var topTipsLabel: UILabel!
     
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var codeTextField: UITextField!
+    
     @IBOutlet weak var phoneContainer: AnimatableView!
     @IBOutlet weak var divideView: UIView!
     @IBOutlet weak var verfyCodeBtn: UIButton!
@@ -51,5 +54,10 @@ class MoreLoginController: BaseAnimatableViewController {
     
     @IBAction func closeButtonClick(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        phoneTextField.resignFirstResponder()
+        codeTextField.resignFirstResponder()
     }
 }

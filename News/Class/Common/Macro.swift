@@ -9,6 +9,7 @@
 import Foundation
 
 let baseUrl = "https://lf.snssdk.com"
+let baseUrl2 = "https://lg.snssdk.com"
 
 let iid = "37735925461"
 let appName = "news_article"
@@ -32,4 +33,5 @@ let version = "6.8.0"
 /// 我的关注
 let apiConcern = "\(baseUrl)/concern/v2/follow/list/v2/?app_name=\(appName)&aid=\(aid)&idfv=&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"
 
-
+/// 分类
+let apiCategory = "\(baseUrl2)/article/category/get_subscribed/v4/?app_name=\(appName)&aid=\(aid)&idfv=&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"

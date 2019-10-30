@@ -11,3 +11,5 @@ import UIKit
 /// 主题改变通知
 let notificationThemeChange = Notification.Name(rawValue: "notificationThemeChange")
 
+/// 计算完缓存大小
+let calculateCacheSizeNotification = Notification.Name(rawValue: "calculateCacheSize")

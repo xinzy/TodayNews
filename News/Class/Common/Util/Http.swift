@@ -25,6 +25,7 @@ func get<T: HandyJSON>(_ url: String, type: T.Type, view: UIView? = nil, success
             return
         }
         if let content = response.value {
+            debugPrint(content)
             let result = T.deserialize(from: content)
             success?(result)
         } else {

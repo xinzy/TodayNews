@@ -15,6 +15,7 @@ target 'News' do
   pod 'SwiftTheme', '~> 0.4.0'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SQLite.swift', '~> 0.12.0'
 
   target 'NewsTests' do
     inherit! :search_paths

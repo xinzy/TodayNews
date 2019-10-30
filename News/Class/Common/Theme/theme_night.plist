@@ -22,10 +22,10 @@
 		<string>#707070</string>
 		<key>cellBackgroundColor</key>
 		<string>#252525</string>
-		<key>cellSeparatorColor</key>
-		<string>#707070</string>
 		<key>loginBtnBackground</key>
 		<string>#5C3D3D</string>
+		<key>cellSeparatorColor</key>
+		<string>#707070</string>
 		<key>separatorColor</key>
 		<string>#707070</string>
 	</dict>
@@ -65,6 +65,10 @@
 		<string>details_choose_icon_night_15x15_</string>
 		<key>loginReadSelectedIcon</key>
 		<string>details_choose_ok_icon_15x15_</string>
+		<key>offlineDownloadOption</key>
+		<string>air_download_option_night_20x20_</string>
+		<key>offlineDownloadOptionSelected</key>
+		<string>air_download_option_press_night_20x20_</string>
 	</dict>
 </dict>
 </plist>
