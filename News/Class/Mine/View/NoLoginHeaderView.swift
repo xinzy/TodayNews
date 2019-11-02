@@ -10,7 +10,7 @@ import UIKit
 import IBAnimatable
 import SwiftTheme
 
-class NoLoginHeaderView: UIView {
+class NoLoginHeaderView: UIView, NibLoadable {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -29,10 +29,6 @@ class NoLoginHeaderView: UIView {
     
     class var headerViewHeight: CGFloat {
         return isFullScreen() ? 280 : 260
-    }
-
-    class func headerView() -> NoLoginHeaderView {
-        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! NoLoginHeaderView
     }
     
     override func awakeFromNib() {

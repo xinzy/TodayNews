@@ -16,6 +16,11 @@
 		DE0B7CE22368145B00325625 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B7CE12368145B00325625 /* Category.swift */; };
 		DE0B7CE52368579300325625 /* NewsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B7CE42368579300325625 /* NewsDatabase.swift */; };
 		DE0B7CE7236857BF00325625 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0B7CE6236857BF00325625 /* libsqlite3.0.tbd */; };
+		DE21C770236D2B4E00A59733 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21C76F236D2B4E00A59733 /* Follow.swift */; };
+		DE21C772236D5F4200A59733 /* AuthorDetailBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21C771236D5F4200A59733 /* AuthorDetailBottomBar.swift */; };
+		DE21C774236DD27200A59733 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21C773236DD27200A59733 /* Array+Extension.swift */; };
+		DE21C776236DD45900A59733 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21C775236DD45900A59733 /* WebViewController.swift */; };
+		DE21C778236DD48800A59733 /* WebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21C777236DD48800A59733 /* WebView+Extension.swift */; };
 		DE34E70A236583570093C652 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE34E709236583570093C652 /* SettingController.swift */; };
 		DE34E70C2365839E0093C652 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE34E70B2365839E0093C652 /* SettingItem.swift */; };
 		DE34E70F23658D900093C652 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE34E70D23658D900093C652 /* SettingItemCell.swift */; };
@@ -45,6 +50,8 @@
 		DE47BB9523606DBE00D835B3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47BB9223606DBE00D835B3 /* Util.swift */; };
 		DE47BB9723606F7D00D835B3 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47BB9623606F7D00D835B3 /* MineController.swift */; };
 		DE47BB99236071BD00D835B3 /* NewsTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47BB98236071BD00D835B3 /* NewsTabBar.swift */; };
+		DE7FAE98236AAEC200825F99 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FAE97236AAEC200825F99 /* Author.swift */; };
+		DE7FAE9A236AF39800825F99 /* HttpTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FAE99236AF39800825F99 /* HttpTools.swift */; };
 		DEBB7748236476BF00B089AB /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB7747236476BF00B089AB /* NotificationNames.swift */; };
 		DEBB774A2364808900B089AB /* MoreLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB77492364808900B089AB /* MoreLoginController.swift */; };
 		DEBB774E236480EE00B089AB /* MoreLoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBB774D236480EE00B089AB /* MoreLoginController.storyboard */; };
@@ -52,6 +59,10 @@
 		DEBB775323648EA400B089AB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB775123648EA400B089AB /* BaseTableViewController.swift */; };
 		DEBB775523648F8500B089AB /* BaseAnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB775423648F8500B089AB /* BaseAnimatableViewController.swift */; };
 		DEBB7757236580F700B089AB /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBB7756236580F700B089AB /* settings.plist */; };
+		DEC94E232369641B00EC3DB2 /* AuthorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */; };
+		DEC94E252369644600EC3DB2 /* AuthorDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */; };
+		DEC94E272369702600EC3DB2 /* AuthorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */; };
+		DEC94E292369703400EC3DB2 /* AuthorHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC94E282369703400EC3DB2 /* AuthorHeaderView.xib */; };
 		DEE6BDA52366E39E00F935E8 /* fontSizeSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEE6BDA42366E39E00F935E8 /* fontSizeSetting.plist */; };
 		DEE6BDA72366E68D00F935E8 /* FontSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */; };
 		DEE6BDAA2366ECA800F935E8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6BDA92366ECA800F935E8 /* Settings.swift */; };
@@ -98,6 +109,11 @@
 		DE0B7CE12368145B00325625 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DE0B7CE42368579300325625 /* NewsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDatabase.swift; sourceTree = "<group>"; };
 		DE0B7CE6236857BF00325625 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DE21C76F236D2B4E00A59733 /* Follow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
+		DE21C771236D5F4200A59733 /* AuthorDetailBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailBottomBar.swift; sourceTree = "<group>"; };
+		DE21C773236DD27200A59733 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		DE21C775236DD45900A59733 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DE21C777236DD48800A59733 /* WebView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView+Extension.swift"; sourceTree = "<group>"; };
 		DE34E709236583570093C652 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		DE34E70B2365839E0093C652 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		DE34E70D23658D900093C652 /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
@@ -134,6 +150,8 @@
 		DE47BB9223606DBE00D835B3 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		DE47BB9623606F7D00D835B3 /* MineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
 		DE47BB98236071BD00D835B3 /* NewsTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTabBar.swift; sourceTree = "<group>"; };
+		DE7FAE97236AAEC200825F99 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		DE7FAE99236AF39800825F99 /* HttpTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTools.swift; sourceTree = "<group>"; };
 		DEBB7747236476BF00B089AB /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		DEBB77492364808900B089AB /* MoreLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginController.swift; sourceTree = "<group>"; };
 		DEBB774D236480EE00B089AB /* MoreLoginController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginController.storyboard; sourceTree = "<group>"; };
@@ -141,6 +159,10 @@
 		DEBB775123648EA400B089AB /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		DEBB775423648F8500B089AB /* BaseAnimatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimatableViewController.swift; sourceTree = "<group>"; };
 		DEBB7756236580F700B089AB /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailController.swift; sourceTree = "<group>"; };
+		DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorDetailController.storyboard; sourceTree = "<group>"; };
+		DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeaderView.swift; sourceTree = "<group>"; };
+		DEC94E282369703400EC3DB2 /* AuthorHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorHeaderView.xib; sourceTree = "<group>"; };
 		DEE6BDA42366E39E00F935E8 /* fontSizeSetting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fontSizeSetting.plist; sourceTree = "<group>"; };
 		DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingItem.swift; sourceTree = "<group>"; };
 		DEE6BDA92366ECA800F935E8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -235,6 +257,8 @@
 				DE3BA439236162D200A9209B /* MineItem.swift */,
 				DE34E70B2365839E0093C652 /* SettingItem.swift */,
 				DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */,
+				DE7FAE97236AAEC200825F99 /* Author.swift */,
+				DE21C76F236D2B4E00A59733 /* Follow.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -396,6 +420,9 @@
 				DEBB774D236480EE00B089AB /* MoreLoginController.storyboard */,
 				DE34E709236583570093C652 /* SettingController.swift */,
 				DE0B7CDA2368122700325625 /* OfflineDownloadController.swift */,
+				DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */,
+				DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */,
+				DE21C775236DD45900A59733 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,6 +451,9 @@
 				DE34E70E23658D900093C652 /* SettingItemCell.xib */,
 				DE0B7CDC236812B100325625 /* OfflineDownloadCell.swift */,
 				DE0B7CDD236812B100325625 /* OfflineDownloadCell.xib */,
+				DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */,
+				DEC94E282369703400EC3DB2 /* AuthorHeaderView.xib */,
+				DE21C771236D5F4200A59733 /* AuthorDetailBottomBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,6 +559,8 @@
 				DE3BA4532361764700A9209B /* UITableView+Extension.swift */,
 				DE3BA4482361760C00A9209B /* UIColor+Extension.swift */,
 				DE3BA4492361760C00A9209B /* UIView+Extension.swift */,
+				DE21C773236DD27200A59733 /* Array+Extension.swift */,
+				DE21C777236DD48800A59733 /* WebView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -538,6 +570,7 @@
 			children = (
 				DE47BB9223606DBE00D835B3 /* Util.swift */,
 				DEE9E109236289E9006F6314 /* Http.swift */,
+				DE7FAE99236AF39800825F99 /* HttpTools.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -694,10 +727,12 @@
 				DEE6BDA52366E39E00F935E8 /* fontSizeSetting.plist in Resources */,
 				DE0B7CDF236812B100325625 /* OfflineDownloadCell.xib in Resources */,
 				DE3BA4402361665200A9209B /* MineItemCell.xib in Resources */,
+				DEC94E292369703400EC3DB2 /* AuthorHeaderView.xib in Resources */,
 				DE34E71023658D900093C652 /* SettingItemCell.xib in Resources */,
 				DEBB774E236480EE00B089AB /* MoreLoginController.storyboard in Resources */,
 				DE47BB3C2360692F00D835B3 /* Assets.xcassets in Resources */,
 				DEE9E12023633A66006F6314 /* theme_default.plist in Resources */,
+				DEC94E252369644600EC3DB2 /* AuthorDetailController.storyboard in Resources */,
 				DEE9E11B2362D2A9006F6314 /* NoLoginHeaderView.xib in Resources */,
 				DEE9E12223633A78006F6314 /* theme_night.plist in Resources */,
 				DEBB7757236580F700B089AB /* settings.plist in Resources */,
@@ -836,16 +871,20 @@
 				DEBB775223648EA400B089AB /* BaseViewController.swift in Sources */,
 				DE47BB8323606BF800D835B3 /* VideoController.swift in Sources */,
 				DE34E70C2365839E0093C652 /* SettingItem.swift in Sources */,
+				DE21C772236D5F4200A59733 /* AuthorDetailBottomBar.swift in Sources */,
 				DEE6BDA72366E68D00F935E8 /* FontSettingItem.swift in Sources */,
 				DEE9E11E236336D5006F6314 /* NewsTheme.swift in Sources */,
 				DE3BA43A236162D200A9209B /* MineItem.swift in Sources */,
 				DE3BA44E2361760C00A9209B /* UIColor+Extension.swift in Sources */,
+				DE21C778236DD48800A59733 /* WebView+Extension.swift in Sources */,
 				DEBB775323648EA400B089AB /* BaseTableViewController.swift in Sources */,
+				DE7FAE98236AAEC200825F99 /* Author.swift in Sources */,
 				DE0B7CDE236812B100325625 /* OfflineDownloadCell.swift in Sources */,
 				DE3BA44D2361760C00A9209B /* CellRegister.swift in Sources */,
 				DE0B7CE52368579300325625 /* NewsDatabase.swift in Sources */,
 				DEE9E10723619A6F006F6314 /* ConcernCell.swift in Sources */,
 				DE3BA4542361764700A9209B /* UITableView+Extension.swift in Sources */,
+				DEC94E272369702600EC3DB2 /* AuthorHeaderView.swift in Sources */,
 				DEE6BDAA2366ECA800F935E8 /* Settings.swift in Sources */,
 				DE47BB8123606BCB00D835B3 /* HomeController.swift in Sources */,
 				DE34E70F23658D900093C652 /* SettingItemCell.swift in Sources */,
@@ -853,8 +892,11 @@
 				DE3BA43F2361665200A9209B /* MineItemCell.swift in Sources */,
 				DE3BA4522361760C00A9209B /* CGRect+Extension.swift in Sources */,
 				DE47BB8923606C4100D835B3 /* NewsNavigationController.swift in Sources */,
+				DEC94E232369641B00EC3DB2 /* AuthorDetailController.swift in Sources */,
 				DE47BB7B23606A8400D835B3 /* AppDelegate.swift in Sources */,
 				DE47BB7F23606BAE00D835B3 /* MainController.swift in Sources */,
+				DE21C776236DD45900A59733 /* WebViewController.swift in Sources */,
+				DE21C770236D2B4E00A59733 /* Follow.swift in Sources */,
 				DEE9E1152362C452006F6314 /* NoLoginHeaderView.swift in Sources */,
 				DEE9E10A236289E9006F6314 /* Http.swift in Sources */,
 				DE0B7CDB2368122700325625 /* OfflineDownloadController.swift in Sources */,
@@ -862,8 +904,10 @@
 				DEBB775523648F8500B089AB /* BaseAnimatableViewController.swift in Sources */,
 				DE3BA44F2361760C00A9209B /* UIView+Extension.swift in Sources */,
 				DE47BB99236071BD00D835B3 /* NewsTabBar.swift in Sources */,
+				DE7FAE9A236AF39800825F99 /* HttpTools.swift in Sources */,
 				DE3BA4512361760C00A9209B /* UICollectionView+Extension.swift in Sources */,
 				DEBB7748236476BF00B089AB /* NotificationNames.swift in Sources */,
+				DE21C774236DD27200A59733 /* Array+Extension.swift in Sources */,
 				DE0B7CE22368145B00325625 /* Category.swift in Sources */,
 				DE34E70A236583570093C652 /* SettingController.swift in Sources */,
 				DE47BB7C23606A8400D835B3 /* SceneDelegate.swift in Sources */,

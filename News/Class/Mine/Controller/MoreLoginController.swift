@@ -29,6 +29,7 @@ class MoreLoginController: BaseAnimatableViewController {
     @IBOutlet weak var tianyiLoginBtn: UIButton!
     @IBOutlet weak var emailLoginBtn: UIButton!
     @IBOutlet weak var qqLoginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

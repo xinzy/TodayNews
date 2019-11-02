@@ -24,7 +24,7 @@ class OfflineDownloadController: BaseTableViewController {
         
         let cats = database.listAll()
         if cats.isEmpty {
-            get(apiCategory, type: ApiResult<Content<Array<Category>>>.self, view: self.view, success: { [weak self] (result) in
+            httpGet(apiCategory, type: ApiResult<Content<Array<Category>>>.self, view: self.view, success: { [weak self] (result) in
                 if let cats = result?.data?.data {
                     self?.categories = cats
                     self?.tableView.reloadData()
@@ -94,12 +94,12 @@ extension OfflineDownloadController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         
         let cat = self.categories[indexPath.row]
         let selected = !self.categories[indexPath.row].isSelected
         self.categories[indexPath.row].isSelected = selected
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.reloadRowAt(indexPath)
+//        tableView.deselectRow(at: indexPath, animated: true)
         
         self.database.setSelected(cat.category, selected: selected)
     }

@@ -9,6 +9,10 @@
 import UIKit
 import Kingfisher
 
+protocol ConcernCellDelegate : class {
+    func concernCell(_ concernCell: ConcernCell, concern: ConcernItem)
+}
+
 class ConcernCell: UITableViewCell, CellRegister {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var concernImageView: UIImageView!
@@ -17,6 +21,9 @@ class ConcernCell: UITableViewCell, CellRegister {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var arrowImageView: UIImageView!
     @IBOutlet weak var separatorView: UIView!
+    
+    weak var delegate: ConcernCellDelegate? = nil
+    
     // 我的关注列表
     var concerns: [ConcernItem]? = nil {
         didSet {
@@ -48,7 +55,7 @@ class ConcernCell: UITableViewCell, CellRegister {
         concernCollectionView.collectionViewLayout = ConcernLayout()
         concernCollectionView.xRegisterCell(cell: ConcernItemCell.self)
         concernCollectionView.dataSource = self
-        
+        concernCollectionView.delegate = self
         
         titleLabel.theme_textColor = "colors.black"
         container.theme_backgroundColor = "colors.cellBackgroundColor"
@@ -66,7 +73,7 @@ class ConcernCell: UITableViewCell, CellRegister {
     }
 }
 
-extension ConcernCell : UICollectionViewDataSource {
+extension ConcernCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return concerns == nil ? 0 : concerns!.count
     }
@@ -75,6 +82,11 @@ extension ConcernCell : UICollectionViewDataSource {
         let cell = collectionView.xDequeueReusableCell(indexPath: indexPath) as ConcernItemCell
         cell.concern = self.concerns![indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let concern = self.concerns![indexPath.row]
+        self.delegate?.concernCell(self, concern: concern)
     }
 }
 

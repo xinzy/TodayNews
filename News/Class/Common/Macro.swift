@@ -31,7 +31,19 @@ let version = "6.8.0"
 /******************************************************************/
 
 /// 我的关注
-let apiConcern = "\(baseUrl)/concern/v2/follow/list/v2/?app_name=\(appName)&aid=\(aid)&idfv=&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"
+let apiConcern = "\(baseUrl)/concern/v2/follow/list/v2/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"
 
 /// 分类
-let apiCategory = "\(baseUrl2)/article/category/get_subscribed/v4/?app_name=\(appName)&aid=\(aid)&idfv=&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"
+let apiCategory = "\(baseUrl2)/article/category/get_subscribed/v4/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)"
+
+/// 作者信息
+let apiAuthorDetail = "\(baseUrl)/user/profile/homepage/v6/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)&user_id=%ld"
+
+/// 关注
+let apiFollow = "\(baseUrl)/2/relation/follow/v2/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)&user_id=%d"
+
+/// 取消关注
+let apiUnfollow = "\(baseUrl)/2/relation/unfollow/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)&user_id=%d"
+
+/// 推荐关注
+let apiFollowRecommend = "\(baseUrl)/user/relation/user_recommend/v1/supplement_recommends/?iid=\(iid)&idfa=\(idfa)&idfv=\(idfv)&follow_user_id=1191508034202365"

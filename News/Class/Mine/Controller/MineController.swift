@@ -18,7 +18,7 @@ class MineController: BaseTableViewController {
     var mConcerns: [ConcernItem]? = nil
     
     private lazy var headerView: NoLoginHeaderView = {
-        let header = NoLoginHeaderView.headerView()
+        let header = NoLoginHeaderView.loadViewFromNib()
         return header
     } ()
     
@@ -31,7 +31,7 @@ class MineController: BaseTableViewController {
         self.tableView.xRegisterCell(cell: ConcernCell.self)
         self.tableView.xRegisterCell(cell: MineItemCell.self)
         
-        get(apiConcern, type: ApiResultList<ConcernItem>.self, view: self.view, success: { result in
+        httpGet(apiConcern, type: ApiResultList<ConcernItem>.self, view: self.view, success: { result in
             if result != nil {
                 self.mConcerns = result!.data
                 self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -96,6 +96,8 @@ extension MineController {
             cell.selectionStyle = .none
             cell.setItem(item: item)
             cell.concerns = mConcerns
+            
+            cell.delegate = self
             return cell
         }
         
@@ -129,5 +131,17 @@ extension MineController {
         default:
             break
         }
+    }
+}
+
+extension MineController : ConcernCellDelegate {
+    func concernCell(_ concernCell: ConcernCell, concern: ConcernItem) {
+        let authorController = createViewControllerFromStoryboard(AuthorDetailController.self)
+        authorController.title = "头条号"
+        authorController.concern = concern
+        self.navigationController?.pushViewController(authorController, animated: true)
+    
+        let data = ["concern" : concern]
+        NotificationCenter.default.post(name: dataNotification, object: nil, userInfo: data)
     }
 }

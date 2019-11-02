@@ -13,3 +13,6 @@ let notificationThemeChange = Notification.Name(rawValue: "notificationThemeChan
 
 /// 计算完缓存大小
 let calculateCacheSizeNotification = Notification.Name(rawValue: "calculateCacheSize")
+
+
+let dataNotification = Notification.Name(rawValue: "dataNotification")

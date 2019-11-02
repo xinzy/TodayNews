@@ -23,13 +23,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9l2-P0-yea">
-                        <rect key="frame" x="284" y="12" width="20" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="QUH-yh-p12"/>
-                            <constraint firstAttribute="height" constant="20" id="biv-tY-rS6"/>
-                        </constraints>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-hl-4b2">
                         <rect key="frame" x="15" y="43.5" width="305" height="0.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -37,22 +30,29 @@
                             <constraint firstAttribute="height" constant="0.5" id="wFx-Cm-3A1"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6df-2S-cPc">
+                        <rect key="frame" x="284" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1bI-ag-K1p"/>
+                            <constraint firstAttribute="width" constant="20" id="YmM-Ck-vH0"/>
+                        </constraints>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9l2-P0-yea" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6p1-7R-szV"/>
+                    <constraint firstItem="6df-2S-cPc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7kA-Ae-Azs"/>
                     <constraint firstItem="Qaa-hl-4b2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SH4-oK-6IK"/>
                     <constraint firstItem="ciE-Hq-yLe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a0e-xS-LE2"/>
                     <constraint firstAttribute="bottom" secondItem="Qaa-hl-4b2" secondAttribute="bottom" id="bHG-lM-31G"/>
+                    <constraint firstAttribute="trailing" secondItem="6df-2S-cPc" secondAttribute="trailing" constant="16" id="dKL-fl-Q6C"/>
                     <constraint firstItem="ciE-Hq-yLe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kY9-7I-Qyf"/>
                     <constraint firstAttribute="bottom" secondItem="ciE-Hq-yLe" secondAttribute="bottom" id="sar-7x-YjJ"/>
-                    <constraint firstAttribute="trailing" secondItem="9l2-P0-yea" secondAttribute="trailing" constant="16" id="u3h-hz-HRa"/>
                     <constraint firstAttribute="trailing" secondItem="Qaa-hl-4b2" secondAttribute="trailing" id="umr-vf-zcr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="container" destination="H2p-sc-9uM" id="RGQ-wl-hhU"/>
-                <outlet property="selectedImageView" destination="9l2-P0-yea" id="g51-uX-Djg"/>
+                <outlet property="selectedBtn" destination="6df-2S-cPc" id="qUd-y1-j8U"/>
                 <outlet property="separatorView" destination="Qaa-hl-4b2" id="e3W-lg-fdQ"/>
                 <outlet property="titleLabel" destination="ciE-Hq-yLe" id="PPJ-ah-1RL"/>
             </connections>

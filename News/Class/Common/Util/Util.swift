@@ -31,14 +31,10 @@ func imageFromName(_ name: String) -> UIImage? {
 
 func isFullScreen() -> Bool {
     if #available(iOS 11, *) {
-        guard let w = UIApplication.shared.delegate?.window, let unwrapedWindow = w else {
-          return false
+        guard let window = UIApplication.shared.windows.first else {
+            return false
         }
-
-        if unwrapedWindow.safeAreaInsets.left > 0 || unwrapedWindow.safeAreaInsets.bottom > 0 {
-          print(unwrapedWindow.safeAreaInsets)
-          return true
-        }
+        return window.safeAreaInsets.bottom > 0
     }
     return false
 }
@@ -46,4 +42,8 @@ func isFullScreen() -> Bool {
 func createViewControllerFromStoryboard<T>(_ name: T.Type, bundle: Bundle? = nil) -> T {
     let storyboard = UIStoryboard(name: String(describing: name.self), bundle: bundle)
     return storyboard.instantiateViewController(withIdentifier: String(describing: name.self)) as! T
+}
+
+func textHeight(_ text: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
+    return (text as NSString).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [.font: UIFont.systemFont(ofSize: fontSize)], context: nil).size.height + 5
 }

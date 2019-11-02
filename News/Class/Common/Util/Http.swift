@@ -11,7 +11,7 @@ import Alamofire
 import MBProgressHUD
 import HandyJSON
 
-func get<T: HandyJSON>(_ url: String, type: T.Type, view: UIView? = nil, success: ((T?) -> Void)? = nil, error: ((Error?) -> Void)? = nil) {
+func httpGet<T: HandyJSON>(_ url: String, type: T.Type, view: UIView? = nil, success: ((T?) -> Void)? = nil, error: ((Error?) -> Void)? = nil) {
     
     if view != nil {
         MBProgressHUD.showAdded(to: view!, animated: true)
@@ -25,7 +25,6 @@ func get<T: HandyJSON>(_ url: String, type: T.Type, view: UIView? = nil, success
             return
         }
         if let content = response.value {
-            debugPrint(content)
             let result = T.deserialize(from: content)
             success?(result)
         } else {

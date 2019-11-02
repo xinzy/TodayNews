@@ -28,6 +28,8 @@
 		<string>#707070</string>
 		<key>separatorColor</key>
 		<string>#707070</string>
+		<key>global_red</key>
+		<string>#E6645F</string>
 	</dict>
 	<key>images</key>
 	<dict>
@@ -69,6 +71,18 @@
 		<string>air_download_option_night_20x20_</string>
 		<key>offlineDownloadOptionSelected</key>
 		<string>air_download_option_press_night_20x20_</string>
+		<key>author_arrow_up</key>
+		<string>arrow_up_16_16x14_</string>
+		<key>author_like</key>
+		<string>c_comment_like_icon_night_18x18_</string>
+		<key>author_like_pressed</key>
+		<string>c_comment_like_press_icon_night_18x18_</string>
+		<key>author_v</key>
+		<string>toutiaohao_night_34x14_</string>
+		<key>author_location</key>
+		<string>place_night_10x12_</string>
+		<key>author_tabbar_option</key>
+		<string>tabbar-options_night_9x9_</string>
 	</dict>
 </dict>
 </plist>

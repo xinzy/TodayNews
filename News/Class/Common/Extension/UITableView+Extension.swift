@@ -22,4 +22,8 @@ extension UITableView {
     func xDequeueReusableCell<T: UITableViewCell>(indexPath: IndexPath) -> T where T: CellRegister {
         return dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as! T
     }
+    
+    func reloadRowAt(_ at: IndexPath, with: UITableView.RowAnimation = .automatic) {
+        self.reloadRows(at: [at], with: with)
+    }
 }

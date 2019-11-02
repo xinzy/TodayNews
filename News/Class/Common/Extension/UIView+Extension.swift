@@ -9,13 +9,24 @@
 import Foundation
 import UIKit
 
+protocol NibLoadable {
+}
+
+extension NibLoadable {
+    static func loadViewFromNib() -> Self {
+        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.first as! Self
+    }
+}
+
 extension UIView {
     var width: CGFloat {
         get {
             return self.frame.size.width
         }
         set {
-            self.frame.size.width = newValue
+            var tmp = frame
+            tmp.size.width = newValue
+            self.frame = tmp
         }
     }
     
@@ -24,7 +35,9 @@ extension UIView {
             return self.frame.size.height
         }
         set {
-            self.frame.size.height = newValue
+            var tmp = frame
+            tmp.size.height = newValue
+            self.frame = tmp
         }
     }
     
@@ -33,7 +46,9 @@ extension UIView {
             return self.frame.origin.x
         }
         set {
-            self.frame.origin.x = newValue
+            var tmp = frame
+            tmp.origin.x = newValue
+            self.frame = tmp
         }
     }
     
@@ -42,25 +57,32 @@ extension UIView {
             return self.frame.origin.y
         }
         set {
-            self.frame.origin.y = newValue
+            var tmp = frame
+            tmp.origin.y = newValue
+            self.frame = tmp
         }
     }
     
     var right: CGFloat {
         get {
-            return left + width
-        }
-        set {
-            left = newValue - width
+            return self.left + self.width
         }
     }
     
     var bottom: CGFloat {
         get {
-            return top + height
+            return self.top + self.height
+        }
+    }
+    
+    var size: CGSize {
+        get {
+            return self.frame.size
         }
         set {
-            top = newValue - height
+            var tmp = self.frame
+            tmp.size = newValue
+            self.frame = tmp
         }
     }
     
@@ -69,7 +91,9 @@ extension UIView {
             return self.center.x
         }
         set {
-            self.left = newValue - width / 2
+            var tmp = self.center
+            tmp.x = newValue
+            self.center = tmp
         }
     }
     
@@ -78,7 +102,10 @@ extension UIView {
             return self.center.y
         }
         set {
-            self.top = newValue - height / 2
+            var tmp = self.center
+            tmp.y = newValue
+            self.center = tmp
         }
     }
+
 }
