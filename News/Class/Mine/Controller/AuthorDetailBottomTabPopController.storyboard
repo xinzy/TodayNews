@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Author Detail Bottom Tab Pop Controller-->
+        <scene sceneID="ntm-ze-9vK">
+            <objects>
+                <viewController storyboardIdentifier="AuthorDetailBottomTabPopController" id="M3r-yH-5oH" customClass="AuthorDetailBottomTabPopController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p0p-TW-bsZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="top-MG-CQg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1py-t1-PEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup_118x58_" translatesAutoresizingMaskIntoConstraints="NO" id="3IX-Uf-K3m">
+                                <rect key="frame" x="-10" y="44" width="434" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMJ-wR-32G">
+                                <rect key="frame" x="0.0" y="54" width="414" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="top-MG-CQg" firstAttribute="top" secondItem="3IX-Uf-K3m" secondAttribute="bottom" id="0si-Sa-YA0"/>
+                            <constraint firstItem="top-MG-CQg" firstAttribute="top" secondItem="qMJ-wR-32G" secondAttribute="bottom" constant="15" id="5OX-n0-lwm"/>
+                            <constraint firstItem="qMJ-wR-32G" firstAttribute="top" secondItem="p0p-TW-bsZ" secondAttribute="bottom" constant="10" id="BLC-0h-9UH"/>
+                            <constraint firstAttribute="trailing" secondItem="qMJ-wR-32G" secondAttribute="trailing" id="KwL-VK-XTB"/>
+                            <constraint firstItem="qMJ-wR-32G" firstAttribute="leading" secondItem="1py-t1-PEj" secondAttribute="leading" id="OgJ-aD-aVd"/>
+                            <constraint firstItem="3IX-Uf-K3m" firstAttribute="top" secondItem="p0p-TW-bsZ" secondAttribute="bottom" id="tsH-gi-eJn"/>
+                            <constraint firstItem="3IX-Uf-K3m" firstAttribute="leading" secondItem="1py-t1-PEj" secondAttribute="leading" constant="-10" id="txL-n5-dn1"/>
+                            <constraint firstAttribute="trailing" secondItem="3IX-Uf-K3m" secondAttribute="trailing" constant="-10" id="u6B-1D-PXQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qMJ-wR-32G" id="32c-Fx-z4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf5-Ll-4tD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popup_118x58_" width="118" height="58"/>
+    </resources>
+</document>

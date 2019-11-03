@@ -15,6 +15,7 @@ class WebViewController: BaseViewController {
 
     private lazy var webView: WKWebView = {
         let view = WKWebView(frame: self.view.bounds)
+        view.theme_backgroundColor = "colors.main"
         return view
     } ()
     

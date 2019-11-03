@@ -35,3 +35,12 @@ func unfollowAuthor(_ userId: UInt64, view: UIView? = nil, block: @escaping (Fol
         block(data)
     })
 }
+
+/// 推荐关注
+func recommendFollow(_ userid: UInt64, view: UIView? = nil, block: @escaping ([UserCard]) -> Void) {
+    let url = String(format: apiFollowRecommend, userid)
+    httpGet(url, type: ApiUserCard<UserCard>.self, view: view, success: { result in
+        guard let data = result?.user_cards else { return }
+        block(data)
+    })
+}

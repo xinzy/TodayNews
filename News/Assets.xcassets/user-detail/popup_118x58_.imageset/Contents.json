@@ -12,8 +12,8 @@
           "height" : 1
         },
         "cap-insets" : {
-          "top" : 48,
-          "bottom" : 67
+          "top" : 51,
+          "bottom" : 64
         }
       },
       "idiom" : "universal",
@@ -25,11 +25,11 @@
         "mode" : "3-part-vertical",
         "center" : {
           "mode" : "stretch",
-          "height" : 1
+          "height" : 55
         },
         "cap-insets" : {
-          "top" : 81,
-          "bottom" : 92
+          "top" : 27,
+          "bottom" : 89
         }
       },
       "idiom" : "universal",

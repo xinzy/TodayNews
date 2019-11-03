@@ -85,7 +85,13 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
     @IBOutlet weak var tabView: UIView!
     @IBOutlet weak var tabScrollView: UIScrollView!
     
-    private var topBackgroundImageHeight: CGFloat = 148
+    private lazy var relationRecommendView: RelationRecommedView = {
+        let view = RelationRecommedView.loadViewFromNib()
+        
+        return view
+    } ()
+    
+    static var topBackgroundImageHeight: CGFloat = 146
     
     var authorInfo: AuthorInfo? {
         didSet {
@@ -165,7 +171,8 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
     private func createTab() {
         let height = self.tabScrollView.height
         for (index, tab) in self.authorInfo!.top_tab.enumerated() {
-            let btn = UIButton(frame: CGRect(x: CGFloat(index) * self.ITEM_TAB_BUTTON_WIDTH, y: 0, width: self.ITEM_TAB_BUTTON_WIDTH, height: height))
+            let btn = UIButton(type: .custom)
+            btn.frame = CGRect(x: CGFloat(index) * self.ITEM_TAB_BUTTON_WIDTH, y: 0, width: self.ITEM_TAB_BUTTON_WIDTH, height: height)
             btn.setTitle(tab.show_name, for: .normal)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             
@@ -206,16 +213,15 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
     }
 }
 
-
 // MARK: - 点击事件
 extension AuthorHeaderView {
     func zoom(_ offset: CGFloat) {
-        if offset >= 0 { return }
-        let height = topBackgroundImageHeight + abs(offset)
+        if offset >= -44 { return }
+        let height = AuthorHeaderView.topBackgroundImageHeight + abs(offset)
         
-        let scale = height / topBackgroundImageHeight
+        let scale = height / AuthorHeaderView.topBackgroundImageHeight
         let width = screenWidth() * scale
-        let x = (screenWidth() - width) / 2
+        let x = -screenWidth() * (scale - 1) * 0.5
         
         topBackgroundImageView.frame = CGRect(x: x, y: offset, width: width, height: height)
     }
@@ -273,8 +279,13 @@ extension AuthorHeaderView {
                 self.recommendTrail.constant = 15
                 self.recommendViewHeight.constant = self.RECOMMEND_HEIGHT
                 
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.3, animations: {
                     self.layoutIfNeeded()
+                }) { _ in
+                    recommendFollow(self.authorInfo!.user_id) { (cards) in
+                        self.recommendView.addSubview(self.relationRecommendView)
+                        self.relationRecommendView.userCards = cards
+                    }
                 }
             }
         }

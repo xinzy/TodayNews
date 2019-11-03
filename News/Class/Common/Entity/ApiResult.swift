@@ -24,3 +24,9 @@ struct Content<R>: HandyJSON {
     var data: R? = nil
     var version: String = ""
 }
+
+struct ApiUserCard<T>: HandyJSON {
+    var err_no = 0
+    var has_more = 0
+    var user_cards: [T]? = nil
+}

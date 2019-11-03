@@ -46,4 +46,4 @@ let apiFollow = "\(baseUrl)/2/relation/follow/v2/?app_name=\(appName)&aid=\(aid)
 let apiUnfollow = "\(baseUrl)/2/relation/unfollow/?app_name=\(appName)&aid=\(aid)&idfv=\(idfv)&os_version=\(osVersion)&device_platform=\(platform)&iid=\(iid)&idfa=\(idfa)&user_id=%d"
 
 /// 推荐关注
-let apiFollowRecommend = "\(baseUrl)/user/relation/user_recommend/v1/supplement_recommends/?iid=\(iid)&idfa=\(idfa)&idfv=\(idfv)&follow_user_id=1191508034202365"
+let apiFollowRecommend = "\(baseUrl)/user/relation/user_recommend/v1/supplement_recommends/?iid=\(iid)&idfa=\(idfa)&idfv=\(idfv)&follow_user_id=%d"

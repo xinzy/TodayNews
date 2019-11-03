@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RelationRecommedView" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关推荐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKM-lf-h0n">
+                    <rect key="frame" x="15" y="0.0" width="399" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="P62-Xm-Cr7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-wj-Am8">
+                    <rect key="frame" x="0.0" y="32" width="414" height="201"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xlL-Xi-slH">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hvq-wj-Am8" firstAttribute="top" secondItem="WKM-lf-h0n" secondAttribute="bottom" id="5Tl-dq-nim"/>
+                <constraint firstAttribute="bottom" secondItem="hvq-wj-Am8" secondAttribute="bottom" id="HZE-WI-lD8"/>
+                <constraint firstItem="WKM-lf-h0n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="IAt-gK-wIV"/>
+                <constraint firstAttribute="trailing" secondItem="hvq-wj-Am8" secondAttribute="trailing" id="SRX-L7-bhq"/>
+                <constraint firstItem="hvq-wj-Am8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UOW-6n-7j0"/>
+                <constraint firstItem="WKM-lf-h0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WhQ-fJ-r1M"/>
+                <constraint firstAttribute="trailing" secondItem="WKM-lf-h0n" secondAttribute="trailing" id="hjf-OZ-RQx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="hvq-wj-Am8" id="JZO-Rd-RQ7"/>
+                <outlet property="titleLabel" destination="WKM-lf-h0n" id="RVi-BO-6dD"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="141"/>
+        </view>
+    </objects>
+</document>

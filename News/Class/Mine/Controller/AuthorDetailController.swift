@@ -17,23 +17,35 @@ class AuthorDetailController: BaseAnimatableViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewTop: NSLayoutConstraint!
     
+    var concern: ConcernItem!
+    var authorInfo: AuthorInfo!
+    
+    private var changeStatusBarStyle: UIStatusBarStyle = .lightContent {
+        didSet {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     private lazy var bottomTabView: AuthorDetailBottomBar = {
         let view = AuthorDetailBottomBar(frame: CGRect(x: 0, y: 0, width: self.bottomView.width, height: self.bottomView.height))
         view.delegate = self
         return view
     } ()
     
-    var concern: ConcernItem!
-    var authorInfo: AuthorInfo!
-    
     private lazy var headerView: AuthorHeaderView = {
         let headerView = AuthorHeaderView.loadViewFromNib()
         return headerView
     } ()
     
+    private lazy var customNavigationBar: AuthorDetailNavigationBar = {
+        let bar = AuthorDetailNavigationBar.loadViewFromNib()
+        return bar
+    } ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addSubview(customNavigationBar)
         scrollView.addSubview(headerView)
         scrollView.delegate = self
         
@@ -48,7 +60,7 @@ class AuthorDetailController: BaseAnimatableViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return changeStatusBarStyle
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,8 +79,19 @@ extension AuthorDetailController : UIScrollViewDelegate, AuthorDetailBottomBarDe
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
-        guard offset < 0 else { return }
-        headerView.zoom(offset)
+        if offset < -44 {
+            headerView.zoom(offset)
+            self.customNavigationBar.alpha(0)
+        } else {
+            let alpha = min(1, (offset + 44) / 58)
+            
+            if alpha == 1.0 {
+                changeStatusBarStyle = .default
+            } else {
+                changeStatusBarStyle = .lightContent
+            }
+            self.customNavigationBar.alpha(alpha)
+        }
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -76,12 +99,35 @@ extension AuthorDetailController : UIScrollViewDelegate, AuthorDetailBottomBarDe
     }
     
     func authorDetailBottomBar(_ bar: AuthorDetailBottomBar, index: Int, button: UIButton, tab: BottomTab) {
+        
         if tab.hasChild() { // 有子节点， 弹出pop
+            let controller = AuthorDetailBottomTabPopController.loadViewControllerFromStoryboard()
+            controller.bottomTabs = tab.children!
+            controller.modalPresentationStyle = .custom
+            controller.delegate = { tab in
+                let webController = WebViewController()
+                webController.url = tab.value
+                webController.title = tab.name
+                self.navigationController?.pushViewController(webController, animated: true)
+            }
+            let delegate = PopAnimationDelete()
+            controller.transitioningDelegate = delegate
             
+            let rect = bottomTabView.convert(button.frame, to: self.view)
+            let x = rect.origin.x + 20
+            let width = rect.width - 40
+            let height = CGFloat(tab.children!.count) * 44 + 25
+            let y = rect.origin.y - height
+            let frame = CGRect(x: x, y: y, width: width, height: height)
+            
+            delegate.presentFrame = frame
+            
+            present(controller, animated: true, completion: nil)
         } else { // 显示网页
-            let controller = WebViewController()
-            controller.url = tab.value
-            self.navigationController?.pushViewController(controller, animated: true)
+            let webController = WebViewController()
+            webController.url = tab.value
+            webController.title = tab.name
+            self.navigationController?.pushViewController(webController, animated: true)
         }
     }
 }

@@ -21,7 +21,8 @@ class AuthorDetailBottomBar: UIView {
             let itemWidth = self.width / CGFloat(bottomTabs.count)
             
             for (index, item) in bottomTabs.enumerated() {
-                let btn = UIButton(frame: CGRect(x: itemWidth * CGFloat(index), y: 0, width: itemWidth, height: self.height))
+                let btn = UIButton(type: .custom)
+                btn.frame = CGRect(x: itemWidth * CGFloat(index), y: 0, width: itemWidth, height: self.height)
                 btn.setTitle(item.name, for: .normal)
                 btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
                 btn.theme_setTitleColor("colors.black", forState: .normal)
@@ -46,7 +47,6 @@ class AuthorDetailBottomBar: UIView {
     }
     
     @objc private func onItemBtnClick(_ btn: UIButton) {
-        print("fuck")
         let tab = self.bottomTabs[btn.tag]
         self.delegate?.authorDetailBottomBar(self, index: btn.tag, button: btn, tab: tab)
     }

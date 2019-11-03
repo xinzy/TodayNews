@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RelationRecommendCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQC-u2-ZTr" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="142" height="190"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwf-dd-ygu" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <rect key="frame" x="38" y="10" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="2bu-nv-lvO"/>
+                                    <constraint firstAttribute="width" constant="66" id="IiM-sN-yLI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_maskType" value="Circle"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="all_v_avatar_18x18_" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-Ku-ZTG">
+                                <rect key="frame" x="86" y="58" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="OnV-Qh-pvG"/>
+                                    <constraint firstAttribute="height" constant="18" id="tVD-Rx-Sf8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2M-Er-qmz">
+                                <rect key="frame" x="15" y="81" width="112" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="IOm-dx-WhA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uz-GG-JhR" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="22" y="152" width="98" height="28"/>
+                                <color key="backgroundColor" red="1" green="0.49796211670000001" blue="0.44446834969999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="C1o-mZ-Qwi"/>
+                                    <constraint firstAttribute="height" constant="28" id="rbC-XL-ooR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="关注"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onFollowClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dNw-nm-upa"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_12x12_" translatesAutoresizingMaskIntoConstraints="NO" id="PmU-PF-uds">
+                                <rect key="frame" x="65" y="160" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="Pdn-7O-jsU"/>
+                                    <constraint firstAttribute="height" constant="12" id="SNp-qv-rG6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zheshiyigehenniubideren" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-Pj-nym">
+                                <rect key="frame" x="15" y="112" width="112" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eEc-Ku-ZTG" firstAttribute="trailing" secondItem="Nwf-dd-ygu" secondAttribute="trailing" id="0e3-Qr-K3E"/>
+                            <constraint firstAttribute="width" constant="142" id="5NH-qc-2wR"/>
+                            <constraint firstItem="Nwf-dd-ygu" firstAttribute="centerX" secondItem="GQC-u2-ZTr" secondAttribute="centerX" id="5vG-SK-zbI"/>
+                            <constraint firstItem="PmU-PF-uds" firstAttribute="centerX" secondItem="4uz-GG-JhR" secondAttribute="centerX" id="6wJ-5i-ZAc"/>
+                            <constraint firstAttribute="height" constant="190" id="9cy-Xj-Tsu"/>
+                            <constraint firstItem="eEc-Ku-ZTG" firstAttribute="bottom" secondItem="Nwf-dd-ygu" secondAttribute="bottom" id="CNT-oj-ByA"/>
+                            <constraint firstAttribute="trailing" secondItem="fRa-Pj-nym" secondAttribute="trailing" constant="15" id="R8z-OG-Shc"/>
+                            <constraint firstItem="F2M-Er-qmz" firstAttribute="leading" secondItem="GQC-u2-ZTr" secondAttribute="leading" constant="15" id="SHA-Hk-j6W"/>
+                            <constraint firstItem="PmU-PF-uds" firstAttribute="centerY" secondItem="4uz-GG-JhR" secondAttribute="centerY" id="bbl-hB-rlM"/>
+                            <constraint firstItem="Nwf-dd-ygu" firstAttribute="top" secondItem="GQC-u2-ZTr" secondAttribute="top" constant="10" id="cZu-4U-bbU"/>
+                            <constraint firstAttribute="bottom" secondItem="4uz-GG-JhR" secondAttribute="bottom" constant="10" id="eyN-OP-N4P"/>
+                            <constraint firstItem="F2M-Er-qmz" firstAttribute="top" secondItem="Nwf-dd-ygu" secondAttribute="bottom" constant="5" id="fSb-86-Zf9"/>
+                            <constraint firstItem="4uz-GG-JhR" firstAttribute="centerX" secondItem="GQC-u2-ZTr" secondAttribute="centerX" id="r5s-TT-s7T"/>
+                            <constraint firstItem="fRa-Pj-nym" firstAttribute="top" secondItem="F2M-Er-qmz" secondAttribute="bottom" constant="8" id="yUc-P1-RoJ"/>
+                            <constraint firstAttribute="trailing" secondItem="F2M-Er-qmz" secondAttribute="trailing" constant="15" id="z9H-oe-pGh"/>
+                            <constraint firstItem="fRa-Pj-nym" firstAttribute="leading" secondItem="GQC-u2-ZTr" secondAttribute="leading" constant="15" id="zYl-ry-45c"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GQC-u2-ZTr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="abt-fM-7qY"/>
+                <constraint firstAttribute="bottom" secondItem="GQC-u2-ZTr" secondAttribute="bottom" id="eVb-Ta-f00"/>
+                <constraint firstItem="GQC-u2-ZTr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="enD-7W-147"/>
+                <constraint firstAttribute="trailing" secondItem="GQC-u2-ZTr" secondAttribute="trailing" id="s0Q-XM-2m8"/>
+            </constraints>
+            <connections>
+                <outlet property="avatarImageView" destination="Nwf-dd-ygu" id="bpH-Nu-fR6"/>
+                <outlet property="followBtn" destination="4uz-GG-JhR" id="29t-Ym-Xny"/>
+                <outlet property="infoLabel" destination="fRa-Pj-nym" id="zVH-hY-HJJ"/>
+                <outlet property="loadingView" destination="PmU-PF-uds" id="QGm-Gi-Mph"/>
+                <outlet property="nameLabel" destination="F2M-Er-qmz" id="jAQ-Ez-ixq"/>
+                <outlet property="vImageView" destination="eEc-Ku-ZTG" id="wF0-yQ-Ijm"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="all_v_avatar_18x18_" width="18" height="18"/>
+        <image name="loading_12x12_" width="12" height="12"/>
+    </resources>
+</document>

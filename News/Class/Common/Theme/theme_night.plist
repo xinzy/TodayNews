@@ -83,6 +83,12 @@
 		<string>place_night_10x12_</string>
 		<key>author_tabbar_option</key>
 		<string>tabbar-options_night_9x9_</string>
+		<key>author_nav_back_white</key>
+		<string>personal_home_back_white_night_24x24_</string>
+		<key>author_nav_back_black</key>
+		<string>personal_home_back_black_night_24x24_</string>
+		<key>author_nav_more_white</key>
+		<string>new_more_titlebar_night_24x24_</string>
 	</dict>
 </dict>
 </plist>

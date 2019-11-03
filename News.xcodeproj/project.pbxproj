@@ -66,6 +66,18 @@
 		DEE6BDA52366E39E00F935E8 /* fontSizeSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEE6BDA42366E39E00F935E8 /* fontSizeSetting.plist */; };
 		DEE6BDA72366E68D00F935E8 /* FontSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */; };
 		DEE6BDAA2366ECA800F935E8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6BDA92366ECA800F935E8 /* Settings.swift */; };
+		DEE8EA2B236E7A4300C368CD /* AuthorDetailBottomTabPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA2A236E7A4300C368CD /* AuthorDetailBottomTabPopController.swift */; };
+		DEE8EA2D236E7B7100C368CD /* AuthorDetailBottomTabPopController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE8EA2C236E7B7100C368CD /* AuthorDetailBottomTabPopController.storyboard */; };
+		DEE8EA2F236EB2F200C368CD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA2E236EB2F200C368CD /* UIViewController+Extension.swift */; };
+		DEE8EA32236EB9F300C368CD /* PopAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA31236EB9F300C368CD /* PopAnimationDelegate.swift */; };
+		DEE8EA34236EC0B900C368CD /* PopWindowPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA33236EC0B900C368CD /* PopWindowPresentationController.swift */; };
+		DEE8EA36236EF57F00C368CD /* AuthorDetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA35236EF57F00C368CD /* AuthorDetailNavigationBar.swift */; };
+		DEE8EA38236EF58C00C368CD /* AuthorDetailNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE8EA37236EF58C00C368CD /* AuthorDetailNavigationBar.xib */; };
+		DEE8EA3A236F05EC00C368CD /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA39236F05EC00C368CD /* UserCard.swift */; };
+		DEE8EA3C236F094100C368CD /* RelationRecommedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA3B236F094100C368CD /* RelationRecommedView.swift */; };
+		DEE8EA3E236F095B00C368CD /* RelationRecommedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE8EA3D236F095B00C368CD /* RelationRecommedView.xib */; };
+		DEE8EA41236F0B2A00C368CD /* RelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8EA3F236F0B2A00C368CD /* RelationRecommendCell.swift */; };
+		DEE8EA42236F0B2A00C368CD /* RelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE8EA40236F0B2A00C368CD /* RelationRecommendCell.xib */; };
 		DEE9E10723619A6F006F6314 /* ConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9E10523619A6F006F6314 /* ConcernCell.swift */; };
 		DEE9E10823619A6F006F6314 /* ConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE9E10623619A6F006F6314 /* ConcernCell.xib */; };
 		DEE9E10A236289E9006F6314 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9E109236289E9006F6314 /* Http.swift */; };
@@ -166,6 +178,18 @@
 		DEE6BDA42366E39E00F935E8 /* fontSizeSetting.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fontSizeSetting.plist; sourceTree = "<group>"; };
 		DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingItem.swift; sourceTree = "<group>"; };
 		DEE6BDA92366ECA800F935E8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DEE8EA2A236E7A4300C368CD /* AuthorDetailBottomTabPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailBottomTabPopController.swift; sourceTree = "<group>"; };
+		DEE8EA2C236E7B7100C368CD /* AuthorDetailBottomTabPopController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorDetailBottomTabPopController.storyboard; sourceTree = "<group>"; };
+		DEE8EA2E236EB2F200C368CD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		DEE8EA31236EB9F300C368CD /* PopAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimationDelegate.swift; sourceTree = "<group>"; };
+		DEE8EA33236EC0B900C368CD /* PopWindowPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopWindowPresentationController.swift; sourceTree = "<group>"; };
+		DEE8EA35236EF57F00C368CD /* AuthorDetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailNavigationBar.swift; sourceTree = "<group>"; };
+		DEE8EA37236EF58C00C368CD /* AuthorDetailNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorDetailNavigationBar.xib; sourceTree = "<group>"; };
+		DEE8EA39236F05EC00C368CD /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		DEE8EA3B236F094100C368CD /* RelationRecommedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommedView.swift; sourceTree = "<group>"; };
+		DEE8EA3D236F095B00C368CD /* RelationRecommedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommedView.xib; sourceTree = "<group>"; };
+		DEE8EA3F236F0B2A00C368CD /* RelationRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommendCell.swift; sourceTree = "<group>"; };
+		DEE8EA40236F0B2A00C368CD /* RelationRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommendCell.xib; sourceTree = "<group>"; };
 		DEE9E10523619A6F006F6314 /* ConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernCell.swift; sourceTree = "<group>"; };
 		DEE9E10623619A6F006F6314 /* ConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConcernCell.xib; sourceTree = "<group>"; };
 		DEE9E109236289E9006F6314 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
@@ -259,6 +283,7 @@
 				DEE6BDA62366E68D00F935E8 /* FontSettingItem.swift */,
 				DE7FAE97236AAEC200825F99 /* Author.swift */,
 				DE21C76F236D2B4E00A59733 /* Follow.swift */,
+				DEE8EA39236F05EC00C368CD /* UserCard.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -406,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				DE47BB6F23606A8400D835B3 /* Controller */,
+				DEE8EA30236EB9DD00C368CD /* Delegate */,
 				DE47BB7023606A8400D835B3 /* Model */,
 				DE47BB7123606A8400D835B3 /* View */,
 			);
@@ -415,13 +441,16 @@
 		DE47BB6F23606A8400D835B3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DE47BB9623606F7D00D835B3 /* MineController.swift */,
-				DEBB77492364808900B089AB /* MoreLoginController.swift */,
-				DEBB774D236480EE00B089AB /* MoreLoginController.storyboard */,
-				DE34E709236583570093C652 /* SettingController.swift */,
-				DE0B7CDA2368122700325625 /* OfflineDownloadController.swift */,
-				DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */,
+				DEE8EA2C236E7B7100C368CD /* AuthorDetailBottomTabPopController.storyboard */,
+				DEE8EA2A236E7A4300C368CD /* AuthorDetailBottomTabPopController.swift */,
 				DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */,
+				DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */,
+				DE47BB9623606F7D00D835B3 /* MineController.swift */,
+				DEBB774D236480EE00B089AB /* MoreLoginController.storyboard */,
+				DEBB77492364808900B089AB /* MoreLoginController.swift */,
+				DE0B7CDA2368122700325625 /* OfflineDownloadController.swift */,
+				DEE8EA33236EC0B900C368CD /* PopWindowPresentationController.swift */,
+				DE34E709236583570093C652 /* SettingController.swift */,
 				DE21C775236DD45900A59733 /* WebViewController.swift */,
 			);
 			path = Controller;
@@ -439,21 +468,27 @@
 		DE47BB7123606A8400D835B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DE3BA43D2361665200A9209B /* MineItemCell.swift */,
-				DE3BA43E2361665200A9209B /* MineItemCell.xib */,
+				DE21C771236D5F4200A59733 /* AuthorDetailBottomBar.swift */,
+				DEE8EA35236EF57F00C368CD /* AuthorDetailNavigationBar.swift */,
+				DEE8EA37236EF58C00C368CD /* AuthorDetailNavigationBar.xib */,
+				DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */,
+				DEC94E282369703400EC3DB2 /* AuthorHeaderView.xib */,
 				DEE9E10523619A6F006F6314 /* ConcernCell.swift */,
 				DEE9E10623619A6F006F6314 /* ConcernCell.xib */,
 				DEE9E11023629FE0006F6314 /* ConcernItemCell.swift */,
 				DEE9E11123629FE0006F6314 /* ConcernItemCell.xib */,
-				DEE9E11A2362D2A9006F6314 /* NoLoginHeaderView.xib */,
+				DE3BA43D2361665200A9209B /* MineItemCell.swift */,
+				DE3BA43E2361665200A9209B /* MineItemCell.xib */,
 				DEE9E1142362C452006F6314 /* NoLoginHeaderView.swift */,
-				DE34E70D23658D900093C652 /* SettingItemCell.swift */,
-				DE34E70E23658D900093C652 /* SettingItemCell.xib */,
+				DEE9E11A2362D2A9006F6314 /* NoLoginHeaderView.xib */,
 				DE0B7CDC236812B100325625 /* OfflineDownloadCell.swift */,
 				DE0B7CDD236812B100325625 /* OfflineDownloadCell.xib */,
-				DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */,
-				DEC94E282369703400EC3DB2 /* AuthorHeaderView.xib */,
-				DE21C771236D5F4200A59733 /* AuthorDetailBottomBar.swift */,
+				DEE8EA3B236F094100C368CD /* RelationRecommedView.swift */,
+				DEE8EA3D236F095B00C368CD /* RelationRecommedView.xib */,
+				DEE8EA3F236F0B2A00C368CD /* RelationRecommendCell.swift */,
+				DEE8EA40236F0B2A00C368CD /* RelationRecommendCell.xib */,
+				DE34E70D23658D900093C652 /* SettingItemCell.swift */,
+				DE34E70E23658D900093C652 /* SettingItemCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -561,6 +596,7 @@
 				DE3BA4492361760C00A9209B /* UIView+Extension.swift */,
 				DE21C773236DD27200A59733 /* Array+Extension.swift */,
 				DE21C777236DD48800A59733 /* WebView+Extension.swift */,
+				DEE8EA2E236EB2F200C368CD /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -591,6 +627,14 @@
 				DEE6BDA92366ECA800F935E8 /* Settings.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		DEE8EA30236EB9DD00C368CD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DEE8EA31236EB9F300C368CD /* PopAnimationDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		DEE9E10D236291C1006F6314 /* Entity */ = {
@@ -728,9 +772,13 @@
 				DE0B7CDF236812B100325625 /* OfflineDownloadCell.xib in Resources */,
 				DE3BA4402361665200A9209B /* MineItemCell.xib in Resources */,
 				DEC94E292369703400EC3DB2 /* AuthorHeaderView.xib in Resources */,
+				DEE8EA38236EF58C00C368CD /* AuthorDetailNavigationBar.xib in Resources */,
 				DE34E71023658D900093C652 /* SettingItemCell.xib in Resources */,
 				DEBB774E236480EE00B089AB /* MoreLoginController.storyboard in Resources */,
+				DEE8EA2D236E7B7100C368CD /* AuthorDetailBottomTabPopController.storyboard in Resources */,
+				DEE8EA42236F0B2A00C368CD /* RelationRecommendCell.xib in Resources */,
 				DE47BB3C2360692F00D835B3 /* Assets.xcassets in Resources */,
+				DEE8EA3E236F095B00C368CD /* RelationRecommedView.xib in Resources */,
 				DEE9E12023633A66006F6314 /* theme_default.plist in Resources */,
 				DEC94E252369644600EC3DB2 /* AuthorDetailController.storyboard in Resources */,
 				DEE9E11B2362D2A9006F6314 /* NoLoginHeaderView.xib in Resources */,
@@ -865,6 +913,7 @@
 			files = (
 				DE47BB9723606F7D00D835B3 /* MineController.swift in Sources */,
 				DEBB774A2364808900B089AB /* MoreLoginController.swift in Sources */,
+				DEE8EA3C236F094100C368CD /* RelationRecommedView.swift in Sources */,
 				DE3BA45623618A9500A9209B /* Macro.swift in Sources */,
 				DE47BB9523606DBE00D835B3 /* Util.swift in Sources */,
 				DEE9E10F236291D9006F6314 /* ApiResult.swift in Sources */,
@@ -879,10 +928,13 @@
 				DE21C778236DD48800A59733 /* WebView+Extension.swift in Sources */,
 				DEBB775323648EA400B089AB /* BaseTableViewController.swift in Sources */,
 				DE7FAE98236AAEC200825F99 /* Author.swift in Sources */,
+				DEE8EA41236F0B2A00C368CD /* RelationRecommendCell.swift in Sources */,
+				DEE8EA2B236E7A4300C368CD /* AuthorDetailBottomTabPopController.swift in Sources */,
 				DE0B7CDE236812B100325625 /* OfflineDownloadCell.swift in Sources */,
 				DE3BA44D2361760C00A9209B /* CellRegister.swift in Sources */,
 				DE0B7CE52368579300325625 /* NewsDatabase.swift in Sources */,
 				DEE9E10723619A6F006F6314 /* ConcernCell.swift in Sources */,
+				DEE8EA2F236EB2F200C368CD /* UIViewController+Extension.swift in Sources */,
 				DE3BA4542361764700A9209B /* UITableView+Extension.swift in Sources */,
 				DEC94E272369702600EC3DB2 /* AuthorHeaderView.swift in Sources */,
 				DEE6BDAA2366ECA800F935E8 /* Settings.swift in Sources */,
@@ -891,12 +943,15 @@
 				DEE9E11223629FE0006F6314 /* ConcernItemCell.swift in Sources */,
 				DE3BA43F2361665200A9209B /* MineItemCell.swift in Sources */,
 				DE3BA4522361760C00A9209B /* CGRect+Extension.swift in Sources */,
+				DEE8EA34236EC0B900C368CD /* PopWindowPresentationController.swift in Sources */,
 				DE47BB8923606C4100D835B3 /* NewsNavigationController.swift in Sources */,
 				DEC94E232369641B00EC3DB2 /* AuthorDetailController.swift in Sources */,
 				DE47BB7B23606A8400D835B3 /* AppDelegate.swift in Sources */,
 				DE47BB7F23606BAE00D835B3 /* MainController.swift in Sources */,
+				DEE8EA36236EF57F00C368CD /* AuthorDetailNavigationBar.swift in Sources */,
 				DE21C776236DD45900A59733 /* WebViewController.swift in Sources */,
 				DE21C770236D2B4E00A59733 /* Follow.swift in Sources */,
+				DEE8EA3A236F05EC00C368CD /* UserCard.swift in Sources */,
 				DEE9E1152362C452006F6314 /* NoLoginHeaderView.swift in Sources */,
 				DEE9E10A236289E9006F6314 /* Http.swift in Sources */,
 				DE0B7CDB2368122700325625 /* OfflineDownloadController.swift in Sources */,
@@ -912,6 +967,7 @@
 				DE34E70A236583570093C652 /* SettingController.swift in Sources */,
 				DE47BB7C23606A8400D835B3 /* SceneDelegate.swift in Sources */,
 				DE3BA43C2361644700A9209B /* MineItems.swift in Sources */,
+				DEE8EA32236EB9F300C368CD /* PopAnimationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
