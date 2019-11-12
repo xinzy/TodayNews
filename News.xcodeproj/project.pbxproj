@@ -59,6 +59,10 @@
 		DEBB775323648EA400B089AB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB775123648EA400B089AB /* BaseTableViewController.swift */; };
 		DEBB775523648F8500B089AB /* BaseAnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB775423648F8500B089AB /* BaseAnimatableViewController.swift */; };
 		DEBB7757236580F700B089AB /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBB7756236580F700B089AB /* settings.plist */; };
+		DEBD46112376776E00B04897 /* AuthorDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD46102376776E00B04897 /* AuthorDynamic.swift */; };
+		DEBD46132376E1C300B04897 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD46122376E1C300B04897 /* ImageItem.swift */; };
+		DEBD462C23795E3700B04897 /* AuthorDongtaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD462A23795E3700B04897 /* AuthorDongtaiCell.swift */; };
+		DEBD462D23795E3700B04897 /* AuthorDongtaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEBD462B23795E3700B04897 /* AuthorDongtaiCell.xib */; };
 		DEC94E232369641B00EC3DB2 /* AuthorDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */; };
 		DEC94E252369644600EC3DB2 /* AuthorDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */; };
 		DEC94E272369702600EC3DB2 /* AuthorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */; };
@@ -171,6 +175,10 @@
 		DEBB775123648EA400B089AB /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		DEBB775423648F8500B089AB /* BaseAnimatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimatableViewController.swift; sourceTree = "<group>"; };
 		DEBB7756236580F700B089AB /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		DEBD46102376776E00B04897 /* AuthorDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDynamic.swift; sourceTree = "<group>"; };
+		DEBD46122376E1C300B04897 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		DEBD462A23795E3700B04897 /* AuthorDongtaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDongtaiCell.swift; sourceTree = "<group>"; };
+		DEBD462B23795E3700B04897 /* AuthorDongtaiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorDongtaiCell.xib; sourceTree = "<group>"; };
 		DEC94E222369641B00EC3DB2 /* AuthorDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailController.swift; sourceTree = "<group>"; };
 		DEC94E242369644600EC3DB2 /* AuthorDetailController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorDetailController.storyboard; sourceTree = "<group>"; };
 		DEC94E262369702600EC3DB2 /* AuthorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorHeaderView.swift; sourceTree = "<group>"; };
@@ -284,6 +292,8 @@
 				DE7FAE97236AAEC200825F99 /* Author.swift */,
 				DE21C76F236D2B4E00A59733 /* Follow.swift */,
 				DEE8EA39236F05EC00C368CD /* UserCard.swift */,
+				DEBD46102376776E00B04897 /* AuthorDynamic.swift */,
+				DEBD46122376E1C300B04897 /* ImageItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -489,6 +499,8 @@
 				DEE8EA40236F0B2A00C368CD /* RelationRecommendCell.xib */,
 				DE34E70D23658D900093C652 /* SettingItemCell.swift */,
 				DE34E70E23658D900093C652 /* SettingItemCell.xib */,
+				DEBD462A23795E3700B04897 /* AuthorDongtaiCell.swift */,
+				DEBD462B23795E3700B04897 /* AuthorDongtaiCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -784,6 +796,7 @@
 				DEE9E11B2362D2A9006F6314 /* NoLoginHeaderView.xib in Resources */,
 				DEE9E12223633A78006F6314 /* theme_night.plist in Resources */,
 				DEBB7757236580F700B089AB /* settings.plist in Resources */,
+				DEBD462D23795E3700B04897 /* AuthorDongtaiCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,6 +931,7 @@
 				DE47BB9523606DBE00D835B3 /* Util.swift in Sources */,
 				DEE9E10F236291D9006F6314 /* ApiResult.swift in Sources */,
 				DEBB775223648EA400B089AB /* BaseViewController.swift in Sources */,
+				DEBD462C23795E3700B04897 /* AuthorDongtaiCell.swift in Sources */,
 				DE47BB8323606BF800D835B3 /* VideoController.swift in Sources */,
 				DE34E70C2365839E0093C652 /* SettingItem.swift in Sources */,
 				DE21C772236D5F4200A59733 /* AuthorDetailBottomBar.swift in Sources */,
@@ -951,6 +965,7 @@
 				DEE8EA36236EF57F00C368CD /* AuthorDetailNavigationBar.swift in Sources */,
 				DE21C776236DD45900A59733 /* WebViewController.swift in Sources */,
 				DE21C770236D2B4E00A59733 /* Follow.swift in Sources */,
+				DEBD46112376776E00B04897 /* AuthorDynamic.swift in Sources */,
 				DEE8EA3A236F05EC00C368CD /* UserCard.swift in Sources */,
 				DEE9E1152362C452006F6314 /* NoLoginHeaderView.swift in Sources */,
 				DEE9E10A236289E9006F6314 /* Http.swift in Sources */,
@@ -960,6 +975,7 @@
 				DE3BA44F2361760C00A9209B /* UIView+Extension.swift in Sources */,
 				DE47BB99236071BD00D835B3 /* NewsTabBar.swift in Sources */,
 				DE7FAE9A236AF39800825F99 /* HttpTools.swift in Sources */,
+				DEBD46132376E1C300B04897 /* ImageItem.swift in Sources */,
 				DE3BA4512361760C00A9209B /* UICollectionView+Extension.swift in Sources */,
 				DEBB7748236476BF00B089AB /* NotificationNames.swift in Sources */,
 				DE21C774236DD27200A59733 /* Array+Extension.swift in Sources */,

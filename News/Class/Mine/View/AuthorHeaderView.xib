@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AuthorHeaderView" customModule="News" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_profile_night" translatesAutoresizingMaskIntoConstraints="NO" id="49o-sd-To4" userLabel="backgroundImageView">
@@ -21,7 +20,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsr-sP-V6a" userLabel="backgroundView">
-                    <rect key="frame" x="0.0" y="102" width="419" height="258"/>
+                    <rect key="frame" x="0.0" y="102" width="419" height="248"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="DU7-ju-eYs" userLabel="avatarImageView" customClass="AnimatableImageView" customModule="IBAnimatable">
                             <rect key="frame" x="15" y="-36" width="72" height="72"/>
@@ -251,6 +250,7 @@
                         <constraint firstItem="Ect-gb-AnC" firstAttribute="leading" secondItem="fsr-sP-V6a" secondAttribute="leading" constant="15" id="8cm-W8-WOV"/>
                         <constraint firstItem="ChF-bF-9Uf" firstAttribute="top" secondItem="cjP-6U-WJn" secondAttribute="bottom" constant="10" id="9U7-aG-hjO"/>
                         <constraint firstItem="zX3-GP-wNE" firstAttribute="trailing" secondItem="DU7-ju-eYs" secondAttribute="trailing" id="Agi-Yd-vEb"/>
+                        <constraint firstAttribute="bottom" secondItem="l0H-0I-lfA" secondAttribute="bottom" id="GVe-F2-SJe"/>
                         <constraint firstAttribute="trailing" secondItem="uC5-sw-8mU" secondAttribute="trailing" constant="20" id="H6R-6b-AfV"/>
                         <constraint firstItem="xjt-2n-OYt" firstAttribute="leading" secondItem="TYa-9c-u8h" secondAttribute="trailing" constant="10" id="IRz-w2-Swj"/>
                         <constraint firstItem="y41-kq-CHM" firstAttribute="leading" secondItem="fsr-sP-V6a" secondAttribute="leading" constant="15" id="KDp-dK-qcj"/>
@@ -287,20 +287,39 @@
                         <constraint firstItem="gaK-De-5es" firstAttribute="centerY" secondItem="TYa-9c-u8h" secondAttribute="centerY" id="zch-3O-RMj"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJ6-Oh-ToR">
+                    <rect key="frame" x="0.0" y="350" width="414" height="178"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQT-jv-fPI">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <viewLayoutGuide key="contentLayoutGuide" id="87K-wM-l6N"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="gjm-Y0-UpM"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="kQT-jv-fPI" firstAttribute="top" secondItem="jJ6-Oh-ToR" secondAttribute="top" id="1nx-KC-RTp"/>
+                        <constraint firstAttribute="bottom" secondItem="kQT-jv-fPI" secondAttribute="bottom" id="Ns0-E4-kKu"/>
+                        <constraint firstAttribute="trailing" secondItem="kQT-jv-fPI" secondAttribute="trailing" id="WBA-z8-pB5"/>
+                        <constraint firstItem="kQT-jv-fPI" firstAttribute="leading" secondItem="jJ6-Oh-ToR" secondAttribute="leading" id="uqS-cn-8kg"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="49o-sd-To4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-44" id="8k6-2t-AC1"/>
+                <constraint firstAttribute="bottom" secondItem="jJ6-Oh-ToR" secondAttribute="bottom" id="IAt-0e-D6O"/>
                 <constraint firstItem="49o-sd-To4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="K1c-1A-WNo"/>
-                <constraint firstAttribute="bottom" secondItem="fsr-sP-V6a" secondAttribute="bottom" id="LM4-im-zsq"/>
                 <constraint firstItem="fsr-sP-V6a" firstAttribute="top" secondItem="49o-sd-To4" secondAttribute="bottom" id="MiX-ln-sRV"/>
                 <constraint firstItem="fsr-sP-V6a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RMm-VG-CnM"/>
+                <constraint firstAttribute="trailing" secondItem="jJ6-Oh-ToR" secondAttribute="trailing" id="gEy-xh-JMV"/>
+                <constraint firstItem="jJ6-Oh-ToR" firstAttribute="top" secondItem="fsr-sP-V6a" secondAttribute="bottom" id="pIY-1H-4Ff"/>
+                <constraint firstItem="jJ6-Oh-ToR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q7S-rN-ylC"/>
                 <constraint firstAttribute="trailing" secondItem="fsr-sP-V6a" secondAttribute="trailing" constant="-5" id="rts-HN-Tbc"/>
                 <constraint firstItem="49o-sd-To4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="thd-Lg-iUB"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="ilm-Hb-ft7"/>
             <connections>
                 <outlet property="areaBtn" destination="Ect-gb-AnC" id="ABY-lu-JoM"/>
                 <outlet property="areaBtnHeight" destination="0I2-u0-bxf" id="UcS-kO-mJL"/>
@@ -311,6 +330,7 @@
                 <outlet property="concernBtn" destination="ajY-nQ-xoy" id="jgu-2G-UPc"/>
                 <outlet property="concernCountLabel" destination="TYa-9c-u8h" id="3Fu-EO-oqN"/>
                 <outlet property="concernLabel" destination="xjt-2n-OYt" id="bNB-1e-5YE"/>
+                <outlet property="containerScrollView" destination="kQT-jv-fPI" id="eAh-4d-DBr"/>
                 <outlet property="containerView" destination="fsr-sP-V6a" id="9eW-bl-9PE"/>
                 <outlet property="descLabel" destination="y41-kq-CHM" id="tNa-3A-0aQ"/>
                 <outlet property="descLabelHeight" destination="6Yu-XC-lDP" id="yYE-UB-sEO"/>
@@ -334,7 +354,7 @@
                 <outlet property="unFoldBtnWidth" destination="9E0-FO-qSx" id="sfq-WQ-FK7"/>
                 <outlet property="verfyLabel" destination="YQw-jU-YfL" id="0M3-98-s7X"/>
             </connections>
-            <point key="canvasLocation" x="163.768115942029" y="153.34821428571428"/>
+            <point key="canvasLocation" x="169.56521739130437" y="136.60714285714286"/>
         </view>
     </objects>
     <resources>

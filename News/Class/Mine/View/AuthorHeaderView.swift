@@ -85,6 +85,8 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
     @IBOutlet weak var tabView: UIView!
     @IBOutlet weak var tabScrollView: UIScrollView!
     
+    @IBOutlet weak var containerScrollView: UIScrollView!
+    
     private lazy var relationRecommendView: RelationRecommedView = {
         let view = RelationRecommedView.loadViewFromNib()
         
@@ -139,10 +141,18 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
                 self.concernBtn.backgroundColor = .red
             }
             createTab()
-            
             layoutIfNeeded()
         }
     }
+    
+    var dongtais: [Dongtai]? {
+        didSet {
+            if dongtais != nil {
+                dongtaiTableView?.reloadData()
+            }
+        }
+    }
+    var dongtaiTableView: UITableView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -190,6 +200,17 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
             if index == self.authorInfo!.top_tab.count - 1 {
                 tabScrollView.contentSize = CGSize(width: btn.right, height: height)
             }
+            
+            let tableView = UITableView()
+            tableView.rowHeight = 144
+            tableView.frame = CGRect(x: CGFloat(index) * screenWidth(), y: 0, width: screenWidth(), height: containerScrollView.height)
+            containerScrollView.addSubview(tableView)
+            
+            if index == 0 {
+                dongtaiTableView = tableView
+                tableView.xRegisterCell(cell: AuthorDongtaiCell.self)
+                tableView.dataSource = self
+            }
         }
         
         tabScrollView.addSubview(indicatorView)
@@ -216,7 +237,7 @@ class AuthorHeaderView: AnimatableView, NibLoadable {
 // MARK: - 点击事件
 extension AuthorHeaderView {
     func zoom(_ offset: CGFloat) {
-        if offset >= -44 { return }
+        
         let height = AuthorHeaderView.topBackgroundImageHeight + abs(offset)
         
         let scale = height / AuthorHeaderView.topBackgroundImageHeight
@@ -291,7 +312,19 @@ extension AuthorHeaderView {
         }
     }
     
-    private func resetLayout() {
-        
+    private func resetLayout() { }
+}
+
+
+// MARK: - TableView DataSource
+extension AuthorHeaderView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dongtais == nil ? 0 : dongtais!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.xDequeueReusableCell(indexPath: indexPath) as AuthorDongtaiCell
+        cell.dongtai = dongtais![indexPath.row]
+        return cell
     }
 }

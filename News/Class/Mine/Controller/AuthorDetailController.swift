@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class AuthorDetailController: BaseAnimatableViewController {
 
@@ -19,6 +20,8 @@ class AuthorDetailController: BaseAnimatableViewController {
     
     var concern: ConcernItem!
     var authorInfo: AuthorInfo!
+    
+    private let headerBackgroundOffsetOffset: CGFloat = isFullScreen() ? -44 : -20
     
     private var changeStatusBarStyle: UIStatusBarStyle = .lightContent {
         didSet {
@@ -39,6 +42,7 @@ class AuthorDetailController: BaseAnimatableViewController {
     
     private lazy var customNavigationBar: AuthorDetailNavigationBar = {
         let bar = AuthorDetailNavigationBar.loadViewFromNib()
+        bar.delegate = self
         return bar
     } ()
     
@@ -46,10 +50,11 @@ class AuthorDetailController: BaseAnimatableViewController {
         super.viewDidLoad()
 
         self.view.addSubview(customNavigationBar)
+//        headerView.frame = scrollView.frame
         scrollView.addSubview(headerView)
         scrollView.delegate = self
         
-        scrollViewTop.constant = isFullScreen() ? -44 : -20
+        scrollViewTop.constant = headerBackgroundOffsetOffset
         bottomViewBottom.constant = isFullScreen() ? 34 : 0
         view.layoutIfNeeded()
         
@@ -61,6 +66,10 @@ class AuthorDetailController: BaseAnimatableViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return changeStatusBarStyle
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -75,15 +84,17 @@ class AuthorDetailController: BaseAnimatableViewController {
 }
 
 // MARK: - Delegate
-extension AuthorDetailController : UIScrollViewDelegate, AuthorDetailBottomBarDelegate {
+extension AuthorDetailController : UIScrollViewDelegate, AuthorDetailBottomBarDelegate, AuthorDetailNavigationBarDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         let offset = scrollView.contentOffset.y
-        if offset < -44 {
+        if offset < headerBackgroundOffsetOffset {
             headerView.zoom(offset)
             self.customNavigationBar.alpha(0)
         } else {
-            let alpha = min(1, (offset + 44) / 58)
+            let headerBackgroundShownHeight: CGFloat = 58 + (isFullScreen() ? 0 : 24)
+            let alpha = min(1, (offset - headerBackgroundOffsetOffset) / headerBackgroundShownHeight)
             
             if alpha == 1.0 {
                 changeStatusBarStyle = .default
@@ -130,24 +141,37 @@ extension AuthorDetailController : UIScrollViewDelegate, AuthorDetailBottomBarDe
             self.navigationController?.pushViewController(webController, animated: true)
         }
     }
+    
+    func authorDetailNavigationBar(_ bar: AuthorDetailNavigationBar) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - Http request
 extension AuthorDetailController {
     
     private func fetchDetail() {
-        getAuthorInfo(self.concern.userId, view: self.view) { info in
-            self.authorInfo = info
-            self.headerView.authorInfo = info
+        getAuthorInfo(self.concern.userId, view: self.view) { [weak self] info in
+            self?.authorInfo = info
+            self?.headerView.authorInfo = info
+            self?.customNavigationBar.authorName = info.name
             
             if !info.hasBottom {
-                self.bottomViewBottom.constant = 0
-                self.bottomViewHeight.constant = 0
-                self.view.layoutIfNeeded()
+                self?.bottomViewBottom.constant = 0
+                self?.bottomViewHeight.constant = 0
+                self?.view.layoutIfNeeded()
             } else {
-                self.createBottomTab()
+                self?.createBottomTab()
             }
+            
+            self?.fetchDongtai()
         }
+    }
+    
+    private func fetchDongtai() {
+        authorDongtai(self.authorInfo.user_id, block: { [weak self] dynamic in 
+            self?.headerView.dongtais = dynamic
+        })
     }
     
     private func createBottomTab() {

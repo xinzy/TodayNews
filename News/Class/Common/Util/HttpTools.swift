@@ -44,3 +44,12 @@ func recommendFollow(_ userid: UInt64, view: UIView? = nil, block: @escaping ([U
         block(data)
     })
 }
+
+/// 用户动态
+func authorDongtai(_ userid: UInt64, view: UIView? = nil, block: @escaping ([Dongtai]) -> Void) {
+    let url = String(format: apiAuthorDongtai, userid)
+    httpGet(url, type: ApiResult<DongtaiWrapper>.self, view: view, success: { result in
+        guard let data = result?.data?.data else { return }
+        block(data)
+    })
+}

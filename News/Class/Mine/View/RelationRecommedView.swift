@@ -17,6 +17,12 @@ class RelationRecommedView: UIView, NibLoadable {
     var userCards: [UserCard]? {
         didSet {
             self.collectionView.reloadData()
+
+            if let cards = self.userCards {
+                var size = self.collectionView.contentSize
+                size.width = CGFloat(162) * CGFloat(cards.count)
+                self.collectionView.contentSize = size
+            }
         }
     }
     
@@ -25,9 +31,14 @@ class RelationRecommedView: UIView, NibLoadable {
         self.backgroundColor = .clear
         titleLabel.theme_textColor = "colors.black"
         
+        if #available(iOS 11.0, *) {
+            self.collectionView.contentInsetAdjustmentBehavior = .never
+        } else {
+        }
         self.collectionView.collectionViewLayout = RelationRecommendLayout()
         self.collectionView.dataSource = self
         self.collectionView.xRegisterCell(cell: RelationRecommendCell.self)
+        
     }
 }
 
